@@ -11,11 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.cielo.json.Greeting;
 
 @RestController
+@RequestMapping("/greetings/v1/greeting")
 public class GreetingController {
 
 	private static final String TEMPLATE = "Hello, %s!";
 
-	@RequestMapping("/greeting")
+	@RequestMapping("/ola")
 	public HttpEntity<Greeting> greeting(
 			@RequestParam(value = "name", required = false, defaultValue = "World") String name) {
 
